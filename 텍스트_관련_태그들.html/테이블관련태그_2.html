@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>표를 만드는 태그 2 - 박수연</title>
+
+    <style>
+        thead {
+            background-color: blueviolet;
+        }
+
+        tfoot {
+            background-color: blueviolet;
+        }
+    </style>
+    </head>
+    <body>
+        <!--표 구조 정의하기-->
+        <section>
+            <h2>표 구조 정의하기</h2>
+            <ul>
+                <li><b>&lt;thead&gt;태그</b> - 제목 (윗부분)</li>
+                <li><b>&lt;tbody&gt;태그</b> - 본문 (중간부분)</li>
+                <li><b>&lt;tfoot&gt;태그</b> - 요약 (밑 부분)</li>
+            </ul>
+        </section>
+
+        <hr>
+        <!--예제 1 표 구조화 하기-->
+        <section>
+            <table border="1" width="50%">
+                <!--제목 부분-->
+                <caption>
+                    <strong>제주특별자치도 학교현황(2015.04.01 기준)</strong>
+                </caption>
+
+                <!--표 만들기 부분-->
+                <thead> <!--표의 제목 부분-->
+                    <th>구분</th>
+                    <th>학교 수</th>
+                    <th>학급 수</th>
+                    <th>학생 수</th>
+                    <th>교원 수</th>                 
+                </thead>
+
+                <tbody> <!--표의 본문 부분-->
+                    <tr>
+                        <th>유치원</th>
+                        <td>117</td>
+                        <td>252</td>
+                        <td>5,547</td>
+                        <td>474</td>
+                    </tr>
+
+                    <tr>
+                        <th>초등학교</th>
+                        <td>111</td>
+                        <td>1,720</td>
+                        <td>37,686</td>
+                        <td>2,632</td>
+                    </tr>
+
+                    <tr>
+                        <th>중학교</th>
+                        <td>44</td>
+                        <td>699</td>
+                        <td>21,274</td>
+                        <td>1,412</td>
+                    </tr>
+
+                    <tr>
+                        <th>고등학교</th>
+                        <td>29</td>
+                        <td>676</td>
+                        <td>22,019</td>
+                        <td>1,433</td>
+                    </tr>
+
+                    <tr>
+                        <th>특수학교</th>
+                        <td>3</td>
+                        <td>90</td>
+                        <td>428</td>
+                        <td>160</td>
+                    </tr>
+                </tbody>
+
+                <tfoot> <!--표의 요약 부분-->
+                    <th>합계</th>
+                    <td>304</td>
+                    <td>3,437</td>
+                    <td>86,954</td>
+                    <td>6,111</td>
+                </tfoot>
+            </table>        
+        </section>
+
+        <hr>
+        <!--예제 2 표에서 열끼리 묶기-->
+        <section>
+            <table border="1" width="60%">
+                <caption>
+                    <b>colgroup 연습</b>
+                </caption>
+
+                <!--열끼리 묶는 부분-->
+                <colgroup>
+                    <col>                                            <!--열 갯수 맞추기 위한 태그, 스타일 X-->
+                    <col span="2" style="background-color: aqua;"> <!--두 번째, 세 번째 열에 파란 배경색 지정-->
+                    <col style="background-color: yellow;">        <!--네 번째 열에 노란 배경색 지정-->
+                </colgroup>
+
+                <!--표 부분-->
+                <tr>
+                    <td>셀</td>
+                    <td>셀</td>
+                    <td>셀</td>
+                    <td>셀</td>
+                </tr>
+
+                <tr>
+                    <td>셀</td>
+                    <td>셀</td>
+                    <td>셀</td>
+                    <td>셀</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+        <!--복습하기-->
+        <section>
+            <table border="1" width="20%">
+                <caption>
+                    <b>1인당 연간 설탕 소비량</b><small>(단위:kg)</small>
+                </caption>
+                <colgroup>
+                    <col style="background-color: #eee;">
+                    <col>
+                </colgroup>
+
+                <!--표 부분-->
+                <tr>
+                    <th>WHO권장량</th>
+                    <td>18.25</td>
+                </tr>
+
+                <tr>
+                    <th>한국</th>
+                    <td>22</td>
+                </tr>
+
+                <tr>
+                    <th>중국</th>
+                    <td>25</td>
+                </tr>
+
+                <tr>
+                    <th>싱가포르</th>
+                    <td>58</td>
+                </tr>
+
+                <tr>
+                    <th>미국</th>
+                    <td>33</td>
+                </tr>
+
+                <tr>
+                    <th>브라질</th>
+                    <td>69</td>
+                </tr>
+
+                <tr>
+                    <th>세계평균</th>
+                    <td>23</td>
+                </tr>
+            </table>
+        </section>
+        
+    </body>
+</html>

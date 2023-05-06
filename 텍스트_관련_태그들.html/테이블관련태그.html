@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>표를 만드는 태그 - 박수연</title>
+    </head>
+    <body>
+        <!--예제 1 2x3 표 만들기-->
+        <section>
+            <table border="1" width="20%">    <!--기본적으로 표는 테두리 없이 표시되기 때문에 table 안에 border 속성을 사용해 테두리 표시-->
+                <tr>    <!--1행-->
+                    <th>제목 셀</th>
+                    <td>1행 2열</td>
+                    <td>1행 3열</td>
+                </tr>
+
+                <tr>    <!--2행-->
+                    <th>제목 셀</th>
+                    <td>2행 2열</td>
+                    <td>2행 3열</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+        <!--예제 2 일부 셀 합치기-->
+        <section>
+            <table border="1" width="60%">     <!--가로 합치기 colspan-->
+                <tr>
+                    <th>이름</th>
+                    <td>박수연</td>
+                    <th>연락처</th>
+                    <td>010-0000-0000</td>
+                </tr>
+                    
+                <tr>
+                    <th>주소</th>
+                    <td colspan="3">경상남도 김해시</td>
+                </tr>
+
+                <tr>
+                    <th>자기소개</th>
+                    <td colspan="3">신라대학교 202395016 컴퓨터공학부 박수연</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <table border="1" width="50%">      <!--세로 합치기 rowspan-->
+                <tr>
+                    <th rowspan="2">이름</th>
+                    <td>셀</td>
+                    <td>셀</td>
+                    <td rowspan="2">셀</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">셀</td>
+                    <td>셀</td>
+                </tr>
+
+                <tr>
+                    <th rowspan="2">학력</th>
+                    <td rowspan="2">셀</td>
+                    <td>셀</td>
+                </tr>
+
+                <tr>
+                    <td>셀</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+        <!--예제 3 표에 제목 붙이기 1 - <caption> 태그-->
+        <section>
+            <table border="1" width="40%">
+                <!--제목 부분-->
+                <caption>   <!--표의 위쪽 중앙에 표시되는 태그-->
+                    <strong>Modem Browser</strong>
+                    <p>국내에서 자주 사용하는 모던 브라우저</p>
+                </caption>
+
+                <!--표 만들기 부분-->
+                <tr>
+                    <th>브라우저</th>
+                    <th>제조업체</th>
+                    <th>다운로드</th>
+                </tr>
+
+                <tr>
+                    <th>크롬(Chrome)</th>
+                    <td>Google</td>
+                    <td>주소부분</td>
+                </tr>
+
+                <tr>
+                    <th>파이어폭스(Firfox)</th>
+                    <td>Mozilla</td>
+                    <td>주소부분</td>
+                </tr>
+
+                <tr>
+                    <th>엣지(Edge)</th>
+                    <td>Microsoft</td>
+                    <td>주소부분</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+        <!--예제 4 표에 제목 붙이기 2 - <figcaption> 태그-->
+        <section>
+            <figure>    <!--표 전체를 먼저 감싸줌-->
+                <!--표에 대한 제목, 설명글 부분-->
+                <figcaption>    <!--설명 글을 붙이고 싶은 대상을 <figure> 태그로 감싸준 후, <figcaption>태그로 제목이나 설명 글을 입력함-->
+                    <p>국내에서 자주 사용하는 모던 브라우저</p>
+                </figcaption>   <!--<table>태그 위에 쓰면 위에 나타나고 아래에 쓰면 아래에 나타남, 중앙정렬 X-->
+
+                <!--표 만들기 부분-->
+                <table border="1" width="40%">
+                    <tr>
+                        <th>브라우저</th>
+                        <th>제조업체</th>
+                        <th>다운로드</th>
+                    </tr>
+    
+                    <tr>
+                        <th>크롬(Chrome)</th>
+                        <td>Google</td>
+                        <td>주소부분</td>
+                    </tr>
+    
+                    <tr>
+                        <th>파이어폭스(Firfox)</th>
+                        <td>Mozilla</td>
+                        <td>주소부분</td>
+                    </tr>
+    
+                    <tr>
+                        <th>엣지(Edge)</th>
+                        <td>Microsoft</td>
+                        <td>주소부분</td>
+                    </tr>
+                </table>
+            </figure>
+        </section>
+
+        <hr>
+        <!--예제 5 화면 낭독기를 위한 표 설명 제공하기-->
+        <section>
+            <p id="summary">    <!--표와 연결하기 위해 p태그에 id를 지정-->
+                다음 표는 HTML5를 지원하는 모던 브라우저를 정리한 것입니다.<br>
+                최신 버전일 수록 HTML5를 좀 더 많이 지원하므로 최신버전을 다운로드 하는 것이 좋습니다.
+            </p>
+            
+            <table aria-describedby="summary" border="1" width="40%">  <!--표에 대한 설명이 적힌 p태그를 연결시켜 표를 이해하는데 도움을 줌-->
+                <tr>
+                    <th>브라우저</th>
+                    <th>제조업체</th>
+                    <th>다운로드</th>
+                </tr>
+
+                <tr>
+                    <th>크롬(Chrome)</th>
+                    <td>Google</td>
+                    <td>주소부분</td>
+                </tr>
+
+                <tr>
+                    <th>파이어폭스(Firfox)</th>
+                    <td>Mozilla</td>
+                    <td>주소부분</td>
+                </tr>
+
+                <tr>
+                    <th>엣지(Edge)</th>
+                    <td>Microsoft</td>
+                    <td>주소부분</td>
+                </tr>
+            </table>
+            
+        </section>
+
+        <hr>
+        <!--복습하기-->
+        <section>
+            <table border="1" width="40%">
+                <tr>
+                    <th rowspan="2">자산 : 현금,<br>현금 외 자산</th>
+                    <td>부채 : 차입금</td>
+                </tr>
+
+                <tr>
+                    <td>자본 : 자본금, 이익잉여금</td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>
