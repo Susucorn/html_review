@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>링크 만들기 - 박수연</title>
+    </head>
+    <body>
+        <!--예제 1 링크 만들기-->
+        <section>
+            <!--텍스트-->
+            <h1>텍스트 링크 만들기</h1>
+            <a href="https://computer.silla.ac.kr">신라대학교 컴퓨터공학부</a>
+
+            <!--이미지-->
+            <h1>이미지 링크 만들기</h1>
+            <a href="https://computer.silla.ac.kr">
+                <img src="img/main (1).jpg" width="300px" height="150px">
+            </a>
+        </section>
+
+        <hr>
+        <!--예제 2 새 탭에 링크 열기-->
+        <section>
+            <h1>텍스트 링크 만들기</h1>
+            <p>
+                <a href="https://computer.silla.ac.kr">신라대학교 컴퓨터공학부 홈페이지(현재 화면)</a>
+            </p>
+            <p>
+                <!--taget 속성으로 속성값 지정하여 새로운 화면에 링크 열기-->
+                <a href="https://computer.silla.ac.kr" target="_blank">신라대학교 컴퓨터공학부 홈페이지(새 창 또는 새 탭)</a>
+            </p>
+
+            <!--taget 속성 표-->
+            <table border="1" width="30%">
+                <caption>
+                    <strong>taget 속성</strong>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>속성 값</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>_blank</th>
+                        <td>링크 내용이 새 창이나 새 탭에서 열림</td>
+                    </tr>
+
+                    <tr>
+                        <th>_self</th>
+                        <td>링크가 있는 화면에서 열림 (기본값)</td>
+                    </tr>
+
+                    <tr>
+                        <th>_parent</th>
+                        <td>프레임을 사용했을 때 링크 내용을 부모 프레임에 표시</td>
+                    </tr>
+
+                    <tr>
+                        <th>_top</th>
+                        <td>프레임을 사용했을 때 프레임에서 벗어나 링크 내용을 전체 화면에 표시</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+        <!--예제 3 한 문서 안에서 점프하기-->
+        <section>
+            <h1>앵커 만들기</h1>
+            <p>
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+
+            <ul id="menu">                          <!--id 앵커이름 지정-->
+                <li><a href="#com1">메뉴 1</a></li>     <!--어디 앵커로 갈지 지정-->
+                <li><a href="#com2">메뉴 2</a></li>
+                <li><a href="#com3">메뉴 3</a></li>
+            </ul>
+
+            <h3 id="com1">메뉴 1</h3>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p><a href="#menu">[메뉴로]</a></p>
+
+            <h3 id="com2">메뉴 2</h3>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p><a href="#menu">[메뉴로]</a></p>
+
+            <h3 id="com3">메뉴 3</h3>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p>        
+                웹 문서가 너무 길 경우 필요한 곳마다 문서 안에 이름을 붙여놓고<br>
+                그 위치로 한 번에 이동할 수 있는 기능을 앵커(anchor)라고 함
+            </p>
+            <p><a href="#menu">[메뉴로]</a></p>
+        </section>
+    </body>
+</html>
